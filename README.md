@@ -30,6 +30,7 @@ Guides by function: [Product](guides/for-product.md) · [Engineering](guides/for
 - **[quick-start.md](quick-start.md)** — VAST in 5 minutes
 - **[guides/](guides/)** — role-based entry points
 - **[kernel.md](kernel.md)** — the mandatory core: principles, rules, non-goals — what makes something *actually* VAST
+- **[anti-patterns.md](anti-patterns.md)** — the catalogue of failure modes (how VAST gets documented and operated wrong), each mapped to the Kernel principle it violates
 - **[vast.md](vast.md)** — core framework definition
 - **[standard-framework.md](standard-framework.md)** — how VAST relates to OKRs, BSC, Wardley Maps
 - **[architecture-levels.md](architecture-levels.md)** — Architecture at product / org / ways-of-working level

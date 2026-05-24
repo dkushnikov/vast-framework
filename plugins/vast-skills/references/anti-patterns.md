@@ -1,6 +1,21 @@
-# VAST anti-patterns — 8 common confusions
+# VAST anti-patterns — detection-tuned companion
 
-The recurring ways VAST documents go wrong. Each entry: the dysfunction, observable signals a skill can detect in a doc, a bad example fragment, the corrected reframe, and the canonical source. Example fragments are illustrative inventions that exhibit the named pattern — they are not quotes from real docs.
+The recurring ways VAST documents go wrong, tuned for automated detection: each entry gives the dysfunction, observable signals a skill can detect in a doc, a bad example fragment, the corrected reframe, and the canonical source. Example fragments are illustrative inventions that exhibit the named pattern — they are not quotes from real docs.
+
+**Source of truth:** the framework catalogue is [`anti-patterns.md`](../../../anti-patterns.md) at the repo root — 13 patterns, each mapped to the Kernel principle it violates. This file is its detection-tuned companion: the eight patterns that can be reliably flagged in a written doc. Mapping to canonical IDs:
+
+| This file | Canonical ID |
+|---|---|
+| 1. Vision-as-Use-Case | AP-05 |
+| 2. Architecture-by-default | AP-01 |
+| 3. OKR conflation | AP-06 |
+| 4. Missing Vision Falsification triggers | AP-07 |
+| 5. Values-as-aspirational | AP-08 |
+| 6. Forcing deep composition where light fits | AP-11 |
+| 7. Vocabulary-only where deep is needed | AP-02 |
+| 8. Strategy challenging Architecture | AP-12 |
+
+Canonical-only (operating-level or newer doc patterns): AP-03 (Architecture-as-org-chart/stack), AP-04 (implementation-as-invariant), AP-09 (ownerless layers), AP-10 (VAST-as-waterfall), AP-13 (Kernel-erosion). AP-03/04/09 are doc-detectable — candidates for a future skill bump.
 
 ## 1. Vision-as-Use-Case
 
@@ -143,4 +158,4 @@ The recurring ways VAST documents go wrong. Each entry: the dysfunction, observa
 
 ---
 
-**Source note:** Patterns derived from `applicability.md` ("Common mistakes"), `standard-framework.md` ("Where it breaks", "Values treated as aspirational", "OKRs conflate three levels"), `glossary.md` ("Vision", "Challenge Flow"), `governance.md` ("Vision Falsification Protocol"), and `vast.md` ("Intentional, not strict" — architecture-by-default), all @v3.3, plus `thinking/2026-04-26-vast-as-philosophy.md` failure-mode discussion. See `version-pinning.md`.
+**Source note:** These eight are the detection-tuned subset of the canonical catalogue ([`../../../anti-patterns.md`](../../../anti-patterns.md)) — see it for the full 13 and the Kernel-principle mapping. Patterns derived from `applicability.md` ("Common mistakes"), `standard-framework.md` ("Where it breaks", "Values treated as aspirational", "OKRs conflate three levels"), `glossary.md` ("Vision", "Challenge Flow"), `governance.md` ("Vision Falsification Protocol"), and `vast.md` ("Intentional, not strict" — architecture-by-default), all @v3.3, plus `thinking/2026-04-26-vast-as-philosophy.md` failure-mode discussion. See `version-pinning.md`.
