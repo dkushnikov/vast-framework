@@ -45,6 +45,8 @@ This decomposition is sharper than alternatives (e.g., OKRs, which compress all 
 
 The triad applies across instantiations: in product (business outcomes / user segments / features), in organizations (org domains / strategic priorities / OKRs), and in other complex systems.
 
+**"Use case" has two senses — keep them distinct.** A use case names a product/strategic element — a **JTBD-shaped opportunity**: a **Problem + Solution + Value** triple. The triad's *Use Cases* role is the **strategic** sense — *where we work / how we invest*, a Strategy-layer construct. But "use case" is also used as an **experience / specification** — the description bridging Vision-intent to a build target, which decomposes across Vision (why / for whom) and Tactics/Outputs (the spec). A PM writing a "use case" may be writing a Strategy investment choice *or* a build spec; conflating the two re-creates OKR-conflation at the document level (see [`glossary.md`](./glossary.md) and [`anti-patterns.md`](./anti-patterns.md)).
+
 ## What's "architectural" in an AI-first world
 
 Traditional architecture = system design, platform capabilities, technology stack, data model, runtime topology. Important but not uniquely AI-first — architectures of this kind have been the defensible artifact for databases, operating systems, and distributed systems for decades.
@@ -169,7 +171,20 @@ The critical distinction:
 
 The test: does the component team commit to the top-level invariants? If yes → real Matryoshka. If every component team defines its own handoff protocols, state-sharing patterns, trust contracts — false Matryoshka.
 
-**The mechanics compose across depths.** Each operating mechanic nests the same way the layers do:
+### Recursion threshold — when a scope earns its own V→A→S→T
+
+Most work does *not* spawn a nested instance; it's Strategy/Tactics within the parent. A scope earns its own V→A→S→T only when all hold:
+
+- **A distinct, falsifiable Vision** — its own committed hypothesis, not just a slice of the parent's.
+- **Local invariants beyond the inherited ones** — guarantees that are its own, not only the parent's it operates within.
+- **Clean accountability** — one accountable owner per layer (the Kernel floor); at small scope one person may hold several layer accountabilities.
+- **Persistence** — a sustained scope, not a one-off effort (a one-shot is Tactics).
+
+**Termination (the usual case):** a scope with no Vision distinct from its parent, no local invariants, and the parent's ownership is **not** a nested VAST — it's Strategy/Tactics *of* the parent. **A feature is the typical termination point:** most features are Use-Cases (Strategy) and Outputs (Tactics) of the product's VAST, not their own nesting. (This mirrors the *Platform threshold* in [`applicability.md`](applicability.md) — a defensive bar that stops everything from claiming its own recursion.)
+
+### The mechanics compose across depths
+
+For scopes that *cross* the recursion threshold, each operating mechanic nests the same way the layers do:
 
 - **Kernel** — every nested instance that claims VAST honors the same [Kernel](kernel.md) floor; Kernel commitments are scope-portable, while the parent's Architecture invariants are inherited constraints at the child boundary.
 - **Accountability** — the one-accountable-owner-per-layer rule remaps at each scope; a cross-scope dispute names the parent owner who holds the decision.
@@ -204,6 +219,12 @@ VAST does not exist in isolation. Several prior frameworks address adjacent ques
 These are explicitly acknowledged. Engagement with them is load-bearing for VAST's intellectual legitimacy, not optional.
 
 See [`external-validation.md`](./references/external-validation.md) for detailed engagement with each.
+
+## Tactics — inherited execution tempo
+
+Tactics owns *personalized instance delivery* — specific compositions for specific users at specific moments. Its **operating tempo is inherited, not invented by VAST.** This is where Agile, Scrum, sprints, Kanban, and the product-delivery lifecycle live — and VAST is **agnostic to which**.
+
+What VAST fixes at Tactics is *what the layer owns* (instance delivery) and *that* it runs an explicit execution loop — **not** the cadence mechanic. (The agentic SDLC below is a *compatible guide*, not a Kernel requirement.) Sprint-vs-Kanban, sprint length, the ceremony set: implementation choices, fungible, chosen per team. Mandating one would be a Kernel non-goal (a prescribed delivery cadence); integrating with whichever you already run is an [Adapter](./kernel.md). The precision is about ownership + execution tempo, not about prescribing how a team iterates.
 
 ## Relation to agentic SDLC
 

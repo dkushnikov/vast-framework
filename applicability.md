@@ -61,6 +61,12 @@ Discovery → validated → delivery decision → VAST at appropriate depth. Edg
 
 The graduation path applies across scopes. A function-level AI experiment (medium composition) that becomes structurally load-bearing may need promotion to shared-platform concern (deep composition).
 
+## Experimental (TTL) skills in discovery
+
+Discovery is outside *VAST delivery governance* by design (see [`vast.md`](vast.md), "Delivery, not discovery") — **not** outside organizational risk governance. A team probing a hypothesis may stand up an **experimental skill** outside the library and its invariants **without** a VAST Architecture decision, provided it is explicitly experimental, **time- or scope-bounded** (a TTL), **non-load-bearing**, and still within the non-negotiable security / privacy / legal / safety guardrails. No probe should wait on an Architecture decision to test an idea.
+
+The skill becomes a governance concern only at the **graduation gate**: when the probe validates, the skill either enters the library under full invariant coverage (an Architecture decision) or is **retired**. The anti-pattern this prevents is an experimental skill silently becoming load-bearing — the same shape as "experiment that accidentally becomes product," at skill granularity.
+
 ## Platform threshold
 
 Not everything shared is Platform. Promoting work to the shared-platform layer requires:
@@ -71,6 +77,17 @@ Not everything shared is Platform. Promoting work to the shared-platform layer r
 - **Lifecycle commitment** — someone owns maintenance, deprecation, migration
 
 Otherwise "Platform" becomes a dumping ground for orphaned skills that no one owns and no one consumes. Platform threshold is a defensive concept: it prevents the pattern where every shared utility claims platform status and inherits deep-composition overhead without corresponding value.
+
+## Recursion threshold
+
+Not everything nested earns its own V→A→S→T (the Matryoshka condition — see [`vast.md`](vast.md)). A scope spawns its own nested instance only if it has:
+
+- **A distinct Vision** — its own falsifiable hypothesis, not a slice of the parent's
+- **Local invariants** — guarantees of its own, beyond the parent's it inherits
+- **Clean accountability** — one accountable owner per layer (one person may hold several at small scope)
+- **Persistence** — a sustained scope, not a one-off effort (a one-shot is Tactics)
+
+Fail any test → it's Strategy/Tactics *within* the parent, not a nested instance. A feature is the typical termination point. Like the Platform threshold above, this is defensive: it prevents recursion-sprawl where every team or feature claims its own framework. The bar is about Vision/invariant/ownership distinctness — not team size or LOC.
 
 ## Common mistakes
 

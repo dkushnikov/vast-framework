@@ -58,9 +58,20 @@ At any level and depth, the structural commitment is:
 
 These are the minimum. Below them, the framework is vocabulary, not application — see [`applicability.md`](./applicability.md) on minimum viable depth.
 
+## Decision propagation
+
+Capturing a decision is not the same as making it findable. The common failure: Architecture gets decided in commits, chat threads, or one team's head — *captured*, perhaps, but the downstream consumers who must operate within it can't discover *what* was decided or *why* at the moment they need it. The framework's decisions then function as a black box, and downstream layers re-create architecture-by-default around them.
+
+Frame it as the split the framework already uses:
+
+- **Invariant:** every Architecture decision that changes an *inherited constraint* — an invariant, an interface, a skill boundary, a trust contract, or cross-consumer behavior — is published in a **discoverable decision record**, reachable from the normal work surfaces of the consumers it affects, without relying on tribal knowledge. (Routine implementation migrations are excluded unless they change an inherited constraint.)
+- **Implementations (fungible):** *how* discoverability is achieved — an ADR repository, PR-to-ticket links, a decision-doc index, an RFC archive. VAST mandates the invariant, never the tool.
+
+This is the same argument [`scaling.md`](./scaling.md) makes about operating models: as agents and teams multiply, decisions must live in a discoverable record, not tribal knowledge. A decision no downstream consumer can find is, operationally, a decision that didn't propagate.
+
 ## Governance-body intensity scales with depth
 
-**Deep composition (typically product engineering, shared platform):** dedicated governance body holds three accountable roles in alignment.
+**Deep composition (typically product engineering, shared platform):** a dedicated governance body aligns the four layer accountabilities — often three people, when Vision and Strategy are held by the same role.
 
 | Layer pair | Why it's a governance body |
 |------------|----------------------------|
@@ -73,6 +84,8 @@ Decisions about composition-framework evolution, invariant changes, skill-librar
 **Medium composition (function-level AI integration):** accountability is named per layer but no dedicated governance body. Cross-layer signals handled in existing exec rhythms (1-1s, function reviews, OKR check-ins).
 
 **Light composition / vocabulary-only:** accountability is still named per layer (this is the minimum). No additional ceremony.
+
+**Reach across levels.** Accountability recurses at *every* level (one neck per layer per scope); the governance *body* recurses only at **deep-composition** levels. Most feature teams operate *within* the parent's invariants (Matryoshka) and escalate via the Challenge & Escalation Protocol rather than standing up their own committee. A nested instance needs its own body only when it crosses the recursion threshold (`vast.md`) *and* sits at deep composition — otherwise the parent's body plus the escalation path suffices.
 
 ## Vision Falsification Protocol
 

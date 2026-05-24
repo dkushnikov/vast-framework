@@ -12,6 +12,12 @@ Shared vocabulary for VAST. Foundational documents (`vast.md`, `kernel.md`, `ant
 
 **Tactics.** The fourth VAST layer. Personalized instance delivery — specific composition moments for specific users. Where iteration happens fastest and continuously.
 
+**Use case (two senses).** A use case names a product/strategic element — a **JTBD-shaped opportunity**: a **Problem + Solution + Value** triple. It is used in two senses that live at different layers; conflating them re-creates OKR-conflation at the document level.
+- **Strategic use case** (VAST-canonical — the triad's Strategy role): *where we work / how we invest* — which composition to pursue next. A Strategy-layer construct.
+- **Experience / specification use case:** the translation-layer description bridging Vision-intent to engineering build-targets — it decomposes across Vision (why / for whom) and Tactics/Outputs (the spec, the ticket).
+
+A PM writing a "use case" may be writing a Strategy investment choice *or* a build spec — different layers. Name which.
+
 ## Composition framework concepts
 
 **Composition framework.** The Architecture layer's primary artifact. Four sub-elements: skill library (what exists), composition interfaces (how skills combine), composition invariants (substrate-portable rules across compositions — see below), and composition implementations (substrate-coupled tactics — see below). The framework as a whole is the defensible artifact; within it, invariants persist across substrate change while implementations migrate.
