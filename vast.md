@@ -231,4 +231,4 @@ See [`case-studies/`](./case-studies/) for worked examples.
 
 ---
 
-**Status:** framework v3.3 — sequencing philosophy extension beyond product delivery. Prior art positioning (BSC, Wardley, VSM). Values anchored in Architecture. Cross-domain instantiations. Adversarial review (multi-model council) informed revisions. Case studies in progress; applied validation pending.
+**Status:** framework v3.4 — adds the mandatory Kernel + operating mechanics (anti-patterns, layer handoffs, fitness, self-evolution governance); VAST applied to VAST. De-personalized for public release. Prior art positioning (BSC, Wardley, VSM); Values anchored in Architecture. Case studies in progress; applied validation pending.

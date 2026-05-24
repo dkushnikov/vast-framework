@@ -96,23 +96,26 @@ Auxiliary documents — context, integrations with adjacent practice, applied ca
 For first-time readers (general):
 
 1. This README
-2. [`vast.md`](./vast.md) — framework essence
-3. [`why-now.md`](./why-now.md) — why this matters now
-4. [`scaling.md`](./scaling.md) — what end state this enables
-5. [`applicability.md`](./applicability.md) — when to use it (and when not)
-6. [`governance.md`](./governance.md) — how accountability works
-7. [`glossary.md`](./glossary.md) — verify vocabulary
-8. References as needed
+2. [`kernel.md`](./kernel.md) — the mandatory core: what makes something *actually* VAST
+3. [`vast.md`](./vast.md) — the full framework essence
+4. [`why-now.md`](./why-now.md) — why this matters now
+5. [`scaling.md`](./scaling.md) — what end state this enables
+6. [`applicability.md`](./applicability.md) — when to use it (and when not)
+7. [`governance.md`](./governance.md) — accountability + the Challenge & Escalation Protocol
+8. [`glossary.md`](./glossary.md) — verify vocabulary
+9. The operating mechanics, as you apply it: [`anti-patterns.md`](./anti-patterns.md), [`layer-handoffs.md`](./layer-handoffs.md), [`fitness.md`](./fitness.md), [`evolution.md`](./evolution.md)
+10. References as needed
 
 For non-product leaders (CX, Marketing, People, Finance, Operations leaders):
 
 1. This README
-2. [`vast.md`](./vast.md) — framework essence
-3. [`applications.md`](./applications.md) — see your function explicitly
-4. [`architecture-levels.md`](./architecture-levels.md) — understand how Architecture applies in your domain
-5. [`applicability.md`](./applicability.md) — what VAST does and does not cover (for setting realistic expectations)
-6. [`governance.md`](./governance.md) — three-level accountability pattern
-7. References as needed
+2. [`kernel.md`](./kernel.md) — the mandatory core (what makes something *actually* VAST)
+3. [`vast.md`](./vast.md) — framework essence
+4. [`applications.md`](./applications.md) — see your function explicitly
+5. [`architecture-levels.md`](./architecture-levels.md) — understand how Architecture applies in your domain
+6. [`applicability.md`](./applicability.md) — what VAST does and does not cover (for setting realistic expectations)
+7. [`governance.md`](./governance.md) — three-level accountability pattern
+8. References as needed
 
 For readers who already know the framework and want to verify a specific question:
 
@@ -147,7 +150,8 @@ The framework emerged from AI composition platform delivery at the pilot company
 - **v3.2** (2026-04-15 cross-function accessibility) — Two new foundational documents added to close the gap for non-product leaders: `architecture-levels.md` (Architecture at product / org-design / WoW with the recurring structural pattern made explicit) and `applications.md` (worked VAST examples for CX / Marketing / People / Finance / Operations). Glossary expanded: invariants list now includes regulatory compliance, audit trails, fairness controls (first-class for several functions); vocabulary aliases ("composition framework" / "capability framework" / "process framework") noted for non-product accessibility. `applicability.md` extended with "what VAST does not cover for AI transformation" — explicit scope limits positioning VAST as one layer of broader transformation playbook.
 
 - **v3.3** (2026-04-27 philosophy extension) — VAST repositioned as sequencing philosophy for complex systems (not product-only). New foundational document `standard-framework.md`: comparison with standard corporate stack, OKR critique, prior art table, feature comparison matrix. Values anchored in Architecture. Cross-domain instantiations (company transformation). Bidirectionality clarified (logical priority, not temporal lockstep). Adversarial review by 5 frontier models (Nestor council).
+- **v3.4** (2026-05-24 self-formalization + public release) — Extracted the mandatory **Kernel** (`kernel.md`: 7 Principles, 4 Rules, published non-goals, self-falsification) and the framework-wide **Kernel → Guides → Adapters → Experiments** layering. Added the operating mechanics: the **anti-patterns** catalogue (`anti-patterns.md`, 13 patterns with `AP-NN` IDs), **layer handoffs** (`layer-handoffs.md`), **layer fitness** (`fitness.md`), and **self-evolution governance** (`evolution.md`) — VAST applied to VAST — plus the **Challenge & Escalation Protocol** in `governance.md`. De-personalized for public release (personal/KosmOS content removed; KosmOS lives in its own repo). Added a release-consistency lint (`scripts/consistency-lint.py`). Each new doc reviewed single-model; cross-doc lint passes 0/0.
 
 ## Status
 
-Early draft. v3.3 extends the framework beyond product delivery: VAST as sequencing philosophy for complex systems, comparison with standard corporate frameworks (BSC, OKRs, Wardley), Values anchored in Architecture, cross-domain instantiations (company transformation). Applied validation pending 6-18 month horizons; case studies in progress.
+Early draft. v3.4 formalizes the mandatory **Kernel** and adds the operating mechanics (anti-patterns, layer handoffs, fitness, self-evolution governance) — VAST now applies its own machinery to itself — and de-personalizes the repo for public release. Applied validation pending 6–18 month horizons; case studies in progress.

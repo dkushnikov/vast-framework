@@ -4,7 +4,7 @@ Plugin references in this directory are condensed extracts from framework canoni
 
 ## Current version
 
-**Framework:** v3.3 (per `vast.md` Status block)
+**Framework:** plugin extracted against v3.3; current framework is v3.4 — plugin re-sync to v3.4 pending.
 
 **Last sync:** 2026-05-21
 
