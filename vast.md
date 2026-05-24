@@ -4,6 +4,8 @@ _New here? Start with [quick-start.md](quick-start.md) (5 min) or [find your rol
 
 > VAST is a sequencing philosophy, deliberately layered. It builds on what already works — Balanced Scorecard's architecture, OKRs' alignment, Wardley's situational awareness — and adds one thing: an explicit cascade from Vision through Architecture to Strategy before Tactics. When systems grow complex enough that implicit structure stops working, VAST makes it visible.
 
+_For the distilled mandatory core — the invariants that make something *actually* VAST — see [kernel.md](kernel.md)._
+
 ## The philosophy
 
 VAST is a framework for operating companies and complex systems in the AI era — a time of unlimited possibilities where choosing the right architecture becomes the critical decision once you've fixed where you want to go.
