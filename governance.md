@@ -124,9 +124,49 @@ Within 4 weeks of Vision revision, Architecture review session:
 
 Without the protocol, Vision-as-hypothesis defaults to "Vision is committed; we'll figure out revision when we see it." That collapses to either fixed Vision (the original survivorship-bias risk) or ad-hoc revision (no discipline). The protocol creates the conditions under which Vision can both anchor Architecture intentionally AND be revised when evidence demands it — without either failure mode.
 
-## Challenge flow
+## Challenge & Escalation Protocol
 
-Same as before: challenge flows down (Vision → Architecture → Strategy → Tactics); feedback flows up (inform, not dictate). At deep composition: enforced through governance-body protocols. At lighter depths: principle followed in existing rhythms.
+Challenge Flow (see [`vast.md`](./vast.md)) names the *direction* of cross-layer influence: challenge flows down — only Vision may challenge Architecture — while feedback flows up (Strategy *informs*, Tactics *escalates*) and Architecture *self-corrects*. This protocol names the *operation*: what a lower layer actually does when it hits something the layer above doesn't support. Without it, "Strategy informs, never challenges" is a rule with no procedure — and the vacuum gets filled by the failure mode it exists to prevent ([anti-pattern](./anti-patterns.md) AP-12, Strategy overriding Architecture).
+
+Enforcement scales with depth: at deep composition the routing runs through the governance body; at lighter depths, through existing exec rhythms. The routing is the same either way.
+
+### Trigger and triage
+
+A lower layer hits something the layer above doesn't support — most commonly **Strategy wants a composition the current Architecture can't deliver** (a use-case with no supporting skills, interfaces, or invariants).
+
+Tactics surfaces the same class of problem from below by **escalating to Strategy** — never directly to Architecture or Vision. Strategy triages: a pure execution issue → Tactics resolves it; a sequencing or use-case issue → Strategy resolves it; an architectural mismatch → enter the routing below.
+
+### The forbidden move
+
+Strategy may **not** challenge or override Architecture — not drop an invariant, not dictate a framework change. That is AP-12, and it re-creates the default-by-accumulation decision-making VAST replaces. The misfit must be *routed*, not forced.
+
+### The discriminator
+
+Route by scope:
+
+> **Does the use-case serve the committed Vision *as currently scoped* — same audience, promise, domain — without requiring a new or revised Vision commitment?**
+
+- **Yes (within scope) → Architecture gap.** The commitment stands for routing purposes; the framework just can't express it yet. → **Route A.**
+- **No (it needs a new/changed audience, promise, domain, success criterion, or value tradeoff) → Vision question.** → **Route B.**
+
+The trap to avoid: a use-case that *both* serves the current Vision and quietly expands its scope — a new segment, channel, or regulated domain. That is a Vision question, not an Architecture gap; route it **B**. When it's genuinely unclear, run both questions explicitly — "how would we build this?" *and* "does this change what we've promised, and to whom?" — rather than letting Strategy resolve it unilaterally. Architecture-feasibility can be analyzed in parallel, but a scope change is Vision's call.
+
+### Route A — inform Architecture (Vision unchanged)
+
+The common case. Strategy hands Architecture first-class evidence: the desired composition, the customer/market signal, the cost of its absence. Architecture — the accountable owner — returns a **documented response**: **accept** (with a closure path), **defer** (with a criterion or timebox), or **decline** (with rationale, owner, and date). A real decision artifact is what makes "respond substantively" more than ceremony.
+
+If Architecture defers or declines a gap that Strategy believes leaves a *committed* Vision promise unsupported, Strategy still does not override — it **informs Vision** of the unresolved mismatch. Vision may then direct Architecture to re-examine (its challenge right), narrow or revise the promise (it may be infeasible — Vision is a hypothesis, not a guarantee), or confirm the use-case is out of scope. This appeal keeps Route A from dead-ending into AP-12, and is the mitigation for the *overpowered* failure mode — Architecture vetoing legitimate Strategy moves (see [Dual-risk calibration](#dual-risk-calibration)).
+
+### Route B — escalate to Vision (the scope may need to change)
+
+The use-case implies an experience outside the committed scope. Strategy cannot challenge Architecture, so it routes *upward* — informing **Vision** that a live use-case sits outside current scope. Vision convenes a review using the decision-and-documentation shape of the [Vision Falsification Protocol](#vision-falsification-protocol) — call it *falsification* only if a named trigger fired, otherwise an out-of-cycle scope review — and decides:
+
+- **Vision expands or revises** → if the Vision changes, **Vision** (the only layer with downward challenge right) challenges Architecture, which re-examines per that protocol's Step 5.
+- **Vision declines** → the use-case is deliberately out of scope. It is *not* built by routing around Architecture. "No — not this, not yet" is a first-class outcome: scope discipline, not failure.
+
+### Grounded, not circular
+
+The legitimacy is Kernel Principle 6, not the mere avoidance of AP-12: Strategy may *inform* upward and Architecture *decides*; only Vision *challenges* downward. AP-12 is the prohibited inversion — Strategy grabbing the downward lever. This protocol is the allowed routing: two legitimate levers (inform Architecture, escalate to Vision) plus a scope discriminator that stops a Vision-change from being smuggled in as an Architecture gap, and a genuine Architecture gap from being inflated into a Vision crisis.
 
 ## Political dimensions — named explicitly
 

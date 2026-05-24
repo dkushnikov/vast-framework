@@ -4,7 +4,7 @@ The V → A → S → T cascade is only valid if each layer hands the next what 
 
 VAST does **not** mandate the medium. A handoff can live in a doc, a Notion page, a Miro board, or a ticket epic — what's required is that the payload exists and is named, not its format. (Mandating templates or tools is a deliberate Kernel non-goal.)
 
-> **This file specifies the *downward* handoffs** — what each layer hands the next to commit. The *upward* direction follows the **Challenge Flow** rules ([`glossary.md`](glossary.md), [`vast.md`](vast.md)): Strategy *informs*, only Vision *challenges* Architecture, Tactics *escalates*. The concrete routing for a use-case that doesn't fit current Architecture — Architecture self-correction, or a Vision-level revisit via the Vision Falsification Protocol — is a forthcoming companion, the Challenge & Escalation Protocol.
+> **This file specifies the *downward* handoffs** — what each layer hands the next to commit. The *upward* direction follows the **Challenge Flow** rules ([`glossary.md`](glossary.md), [`vast.md`](vast.md)): Strategy *informs*, only Vision *challenges* Architecture, Tactics *escalates*. The concrete routing for a use-case that doesn't fit current Architecture — Architecture self-correction, or a Vision-level revisit via the Vision Falsification Protocol — is specified in the Challenge & Escalation Protocol ([`governance.md`](governance.md)).
 
 | Handoff | What must pass (the invariant payload) |
 |---|---|

@@ -78,7 +78,7 @@ The layer's *form* is present, but nothing is actually committed, constrained, o
 ### AP-12 · Strategy challenging Architecture (instead of informing)
 **Pattern:** Strategy tries to override Architecture — vetoing invariants, dictating framework changes — rather than feeding signal up for Architecture to decide. Re-creates the diffuse, default-by-accumulation decision-making VAST replaces.
 **Violates:** Principle 6 (Challenge flows down; only Vision challenges Architecture; Strategy *informs*).
-**Reframe:** Strategy supplies first-class evidence ("this invariant is costing us adoption in segment X — here's the data"); the Architecture owner decides whether to keep, relax, or re-engineer it.
+**Reframe:** Strategy supplies first-class evidence ("this invariant is costing us adoption in segment X — here's the data"); the Architecture owner decides whether to keep, relax, or re-engineer it. The full routing — inform Architecture vs escalate via Vision — is the Challenge & Escalation Protocol (`governance.md`).
 
 ### AP-13 · Kernel erosion
 **Pattern:** Over time, implementations leak into the mandatory core — a favored cadence, tool, or scaling fork starts being treated as "part of VAST" — or a published non-goal quietly becomes prescribed. The small portable core bloats into a methodology.
