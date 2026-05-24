@@ -52,6 +52,10 @@ Full suite — all five skills ship (`vast-okr-audit`, `vast-validate`, `vast-tr
 
 ## Changelog
 
+### V0.3 (2026-05-24)
+- Re-synced references to framework **v3.4** (Kernel + operating mechanics added upstream): `vast-essentials` reflects the four composition sub-elements and points to the Kernel; the `anti-patterns` companion now cites the canonical `anti-patterns.md` (it's the doc-detectable subset, 8 of 13 `AP-NN`).
+- Backlog (next): teach `vast-validate` to check the Kernel floor and detect AP-03 / AP-04 / AP-09 — doc-detectable, not yet wired into the skill's checks.
+
 ### V0.2 (2026-05-23)
 - Suite completed — added `vast-validate`, `vast-transform`, `vast-connect`, `vast-draft`
 - `vast-validate` — single-doc layer-purity validation (Pass / Warn / Fail)

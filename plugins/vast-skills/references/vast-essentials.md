@@ -1,6 +1,6 @@
 # VAST essentials
 
-Fast-path condensation of the VAST core: the four layers, the triad, the invariants/implementations split, and vocabulary aliases. Skills load this instead of re-reading the full framework on every invocation. Where this disagrees with canonical, canonical wins (see `version-pinning.md`).
+Fast-path condensation of the VAST core: the four layers, the triad, the invariants/implementations split, and vocabulary aliases. Skills load this instead of re-reading the full framework on every invocation. The mandatory core itself is the [Kernel](../../../kernel.md) — this file is the fast-path condensation, not the floor that defines VAST. Where this disagrees with canonical, canonical wins (see `version-pinning.md`).
 
 VAST names a sequencing principle — **Vision → Architecture → Strategy → Tactics** — in that order of *commitment priority*, not temporal phase-gates. All four layers operate continuously; the arrows are bidirectional (Strategy reveals Architecture gaps, Tactics inform Strategy). What's load-bearing is logical priority: commitment at Vision and Architecture is what makes downstream iteration compound.
 
@@ -9,7 +9,7 @@ VAST names a sequencing principle — **Vision → Architecture → Strategy →
 | Layer | What it owns |
 |---|---|
 | **Vision** | What experiences we enable, for whom, and why this exists. Committed as a falsifiable hypothesis with named revision triggers — neither emergent (Lean) nor immutable (waterfall). |
-| **Architecture** | The composition framework — skill library, interfaces, invariants. What can be composed, how, and under what guarantees. This is composition/decision architecture, not the substrate tech stack. |
+| **Architecture** | The composition framework — skill library, interfaces, invariants, implementations. What can be composed, how, and under what guarantees. This is composition/decision architecture, not the substrate tech stack. |
 | **Strategy** | Which experiences to compose next: sequencing, customer validation, roadmap of compositions. Operates *within* the composition framework — informs Architecture but does not override it. |
 | **Tactics** | Personalized instance delivery — specific composition moments for specific users at specific times. Where iteration runs fastest and most continuously. |
 
@@ -67,4 +67,4 @@ Foundational docs primarily say "composition framework"; function applications m
 
 ## 5. Source
 
-Extracted from `vast.md`@v3.3 (sections "The four layers", "The triad: Outcomes / Use Cases / Outputs", "What the composition framework actually owns — invariants vs implementations") + `glossary.md`@v3.3 ("Vocabulary aliases"). See `version-pinning.md` for the full source map and drift policy.
+Extracted from `vast.md`@v3.4 (sections "The four layers", "The triad: Outcomes / Use Cases / Outputs", "What the composition framework actually owns — invariants vs implementations") + `glossary.md`@v3.4 ("Vocabulary aliases"). See `version-pinning.md` for the full source map and drift policy.

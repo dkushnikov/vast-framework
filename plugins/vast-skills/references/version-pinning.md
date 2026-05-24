@@ -4,9 +4,9 @@ Plugin references in this directory are condensed extracts from framework canoni
 
 ## Current version
 
-**Framework:** plugin extracted against v3.3; current framework is v3.4 — plugin re-sync to v3.4 pending.
+**Framework:** v3.4 (synced 2026-05-24).
 
-**Last sync:** 2026-05-21
+**Last sync:** 2026-05-24
 
 ## Files and their canonical sources
 
@@ -14,7 +14,7 @@ Plugin references in this directory are condensed extracts from framework canoni
 |---|---|
 | `vast-essentials.md` | `vast.md` (sections: "The four layers", "The triad", "What the composition framework actually owns — invariants vs implementations"), `glossary.md` ("Vocabulary aliases") |
 | `layer-definitions.md` | `governance.md` ("Level 1 — Company", "Level 2 — Product", "Level 3 — Function") = primary source for company/product/function scope rows; `architecture-levels.md` = WoW scope + Architecture-row detail for product/function |
-| `anti-patterns.md` | `applicability.md` ("Common mistakes"), `standard-framework.md` ("Where it breaks"), `glossary.md` ("Challenge Flow"), `governance.md` ("Vision Falsification Protocol") |
+| `anti-patterns.md` | `anti-patterns.md` (the canonical catalogue — this companion is its doc-detectable subset, covering 8 of 13 `AP-NN`) |
 
 Source is `glossary.md` (the canonical definitions doc). Extract definitions from there.
 
