@@ -34,6 +34,7 @@ Guides by function: [Product](guides/for-product.md) · [Engineering](guides/for
 - **[vast.md](vast.md)** — core framework definition
 - **[layer-handoffs.md](layer-handoffs.md)** — what each layer must hand the next: the invariant payloads of the V→A→S→T cascade (medium-agnostic)
 - **[fitness.md](fitness.md)** — thin per-layer fitness questions: is each layer actually doing its job? (not a maturity ladder, not metrics)
+- **[evolution.md](evolution.md)** — how VAST evolves itself: promotion/retirement across Kernel→Guides→Adapters→Experiments, protecting the refusals, VAST applied to VAST
 - **[standard-framework.md](standard-framework.md)** — how VAST relates to OKRs, BSC, Wardley Maps
 - **[architecture-levels.md](architecture-levels.md)** — Architecture at product / org / ways-of-working level
 - **[applications.md](applications.md)** — VAST applied to CX, Marketing, People, Finance, Operations
