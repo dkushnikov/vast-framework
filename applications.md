@@ -9,12 +9,9 @@ VAST's sequencing principle (V→A→S→T) applies beyond product delivery. Eac
 | Instantiation | Vision | Architecture | Strategy | Tactics |
 |---|---|---|---|---|
 | **Product** (original) | Product vision, experiences | Composition framework, skills, invariants | Which experiences to compose, sequencing | Specific compositions for specific users |
-| **[KosmOS](https://github.com/dkushnikov/kosmos)** (life)¹ | Life Compass (purpose, values) | Life Capitals (6 domains) + Values (constraints) | Areas (use cases) + Goals (priorities) | Projects + Habits |
 | **Company transformation** | Company vision, mission | Org capabilities + Values (constraints) + Domain structure | Strategic areas + Priorities | Goals + Projects |
 
-Cross-domain applicability is one of VAST's distinctive claims — few sequencing frameworks use the same cascade vocabulary across product delivery, organizational design, and life planning. A person using VAST at work and KosmOS in life has shared vocabulary across domains.
-
-¹ KosmOS is a separate personal project that uses the VAST cascade for life planning. Included to demonstrate cross-domain applicability of the sequencing principle.
+Cross-domain applicability is one of VAST's distinctive claims — few sequencing frameworks use the same cascade vocabulary across product delivery and organizational design.
 
 ## Functional applications
 

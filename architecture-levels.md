@@ -103,7 +103,7 @@ See [`standard-framework.md`](./standard-framework.md) for the full mapping of s
 
 ## Architecture must be concrete per instantiation
 
-"Architecture" means different things at different scopes: composition framework (product), org capabilities (company), life domains (life application via [KosmOS](https://github.com/dkushnikov/kosmos), a separate project demonstrating cross-domain applicability). The abstract concept — "the structural domains of the system with their invariants and interfaces" — is shared. The content is scope-specific.
+"Architecture" means different things at different scopes: composition framework (product), org capabilities (company), process building blocks (ways-of-working). The abstract concept — "the structural domains of the system with their invariants and interfaces" — is shared. The content is scope-specific.
 
 In each instantiation, Architecture must be defined concretely: specific domains, specific boundaries, specific interactions. Without this, Architecture risks becoming a label that sounds precise but means anything. The test: can you enumerate your Architecture's components and their interfaces? If not, you don't have Architecture — you have a word.
 

@@ -12,8 +12,6 @@ Concrete applications of VAST to real problems. Each case study has the same sha
 ## Index
 
 - [`001-ai-platform.md`](./001-ai-platform.md) — an AI composition platform at the pilot company. The primary pilot. Origin context of VAST.
-- [`002-distributed-atlas.md`](./002-distributed-atlas.md) — multi-instance Claude-based AI partner system. VAST applied to personal infrastructure at system-architecture level.
-- [`003-slack-logic.md`](./003-slack-logic.md) — Slack business-logic layer atop agentic transport. VAST applied to operational tooling. (In progress.)
 
 ## Adding a case study
 

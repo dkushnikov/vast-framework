@@ -48,7 +48,7 @@ Plugin uses condensed extracts from framework canonical docs (version-pinned). S
 
 ## Status
 
-Full suite — all five skills ship (`vast-okr-audit`, `vast-validate`, `vast-transform`, `vast-connect`, `vast-draft`). Spec: `thinking/2026-05-21-vast-skills-design.md` (paths relative to framework repo root).
+Full suite — all five skills ship (`vast-okr-audit`, `vast-validate`, `vast-transform`, `vast-connect`, `vast-draft`).
 
 ## Changelog
 

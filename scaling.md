@@ -62,7 +62,7 @@ Failure modes that would falsify this thesis:
 - Headcount stays flat but product quality degrades (agentic capacity not actually substituting for human judgment in necessary places)
 - Library plateaus despite organizational investment (skills are not durable; substrate volatility eating implementations faster than invariants compound)
 
-This is testable at applied case study level. Block (Dorsey/Botha account) is the cleanest external example; VAST's own case studies (an AI composition platform at the pilot company, Distributed Atlas, a Slack business-logic layer) will provide additional evidence over 2026-2028 horizons.
+This is testable at applied case study level. Block (Dorsey/Botha account) is the cleanest external example; VAST's own case studies (an AI composition platform at the pilot company) will provide additional evidence over 2026-2028 horizons.
 
 ## What this changes about how to think about org design
 

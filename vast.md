@@ -228,8 +228,6 @@ Additional adjacent frameworks and practitioner signals are consolidated in [`ex
 See [`case-studies/`](./case-studies/) for worked examples.
 
 - **001** — AI composition platform architecture at the pilot company (primary pilot).
-- **002** — Distributed Atlas (multi-instance AI partner system).
-- **003** — Slack business-logic layer on agentic transport (in progress).
 
 ---
 
