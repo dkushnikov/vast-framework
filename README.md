@@ -32,6 +32,7 @@ Guides by function: [Product](guides/for-product.md) · [Engineering](guides/for
 - **[kernel.md](kernel.md)** — the mandatory core: principles, rules, non-goals — what makes something *actually* VAST
 - **[anti-patterns.md](anti-patterns.md)** — the catalogue of failure modes (how VAST gets documented and operated wrong), each mapped to the Kernel principle it violates
 - **[vast.md](vast.md)** — core framework definition
+- **[layer-handoffs.md](layer-handoffs.md)** — what each layer must hand the next: the invariant payloads of the V→A→S→T cascade (medium-agnostic)
 - **[standard-framework.md](standard-framework.md)** — how VAST relates to OKRs, BSC, Wardley Maps
 - **[architecture-levels.md](architecture-levels.md)** — Architecture at product / org / ways-of-working level
 - **[applications.md](applications.md)** — VAST applied to CX, Marketing, People, Finance, Operations
