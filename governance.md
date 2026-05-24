@@ -1,0 +1,164 @@
+# Governance — accountability across levels and depths
+
+VAST governance has two dimensions:
+
+1. **Level** — at what organizational scope is the framework applied (company / product / function)
+2. **Composition depth** — how rich is the framework at this level (deep / medium / light / vocabulary-only — see [`applicability.md`](./applicability.md))
+
+The accountability shape is the same at every level (one named accountable role per layer); the specific role names map to whatever titles your organization uses. The mechanics scale with depth — deep composition warrants dedicated governance bodies; lighter composition relies on existing exec rhythms.
+
+## Three levels of governance
+
+VAST is recursive across organizational scopes. The four-layer shape (V/A/S/T) reappears at each level with appropriately scoped accountable roles. The framework does not require any specific titles to exist in your org; it requires that you map the abstract roles to whoever holds the accountability.
+
+### Level 1 — Company
+
+| Layer | What it owns at company level | Mapped to (typical) |
+|-------|-------------------------------|---------------------|
+| Vision | What the company becomes. Market stance. Why this company exists. | CEO / founder team |
+| Architecture | How the company is structured to deliver the Vision: org design, capability portfolio, technology investment strategy | CEO + leadership team (architecture of the company-as-system) |
+| Strategy | Which capabilities to develop in what sequence. Allocation of resources to functions and bets. | Function leaders / heads of organizations |
+| Tactics | Execution within each function | Teams, individual contributors |
+
+At company level, "Architecture" is mostly organizational and capability-portfolio architecture, not technical architecture. The composition-framework framing applies less directly; the four-layer shape applies as vocabulary for thinking about company-wide intentionality.
+
+### Level 2 — Product (the primary VAST application)
+
+| Layer | What it owns at product level | Mapped to (typical) |
+|-------|-------------------------------|---------------------|
+| Vision | What experiences the product enables, for whom, why | CPO / product leadership |
+| Architecture | The composition framework — skill library, interfaces, invariants, implementations | CTO / engineering leadership |
+| Strategy | Which experiences to compose next, sequencing, customer validation | Product Directors / Product Managers |
+| Tactics | Personalized instance delivery | Engineering Managers / delivery teams |
+
+This is where VAST's claims are sharpest. The composition-framework concept (invariants vs implementations) directly applies. Deep composition with full discipline is appropriate when the product is AI-first and the substrate matters.
+
+### Level 3 — Function / Department
+
+| Layer | What it owns at function level | Mapped to (typical) |
+|-------|--------------------------------|---------------------|
+| Vision | What the function becomes. The function's strategic stance. | Function leader (e.g., VP Marketing, VP CX, VP Operations) |
+| Architecture | The function's composition framework — what tools, processes, AI integrations, automations make up the function's capability set | Function tech lead, ops lead, or designated process owner |
+| Strategy | Which capabilities to invest in next, sequencing within function | Function sub-leaders / direct reports of function leader |
+| Tactics | Function team execution | Function teams |
+
+At function level, composition framework depth varies by function's AI integration. Marketing with heavy AI content systems = medium-to-deep composition. Finance with AI-assisted forecasting = medium composition. HR with standard tooling = light composition. The framework applies as deeply as the function's actual AI substrate engagement warrants.
+
+### Recursion
+
+The levels recurse — within a function, sub-teams may have their own V/A/S/T at sub-function scope. Within a product, components may have their own V/A/S/T (Matryoshka — see [`vast.md`](./vast.md)). The pattern repeats; accountability roles re-map at each level.
+
+## Accountability pattern (level-agnostic)
+
+At any level and depth, the structural commitment is:
+
+- **One accountable role per layer.** One neck. Not committee, not collective ownership.
+- **Accountability publicly known.** Not implicit. The accountable person is named in writing.
+- **Decisions captured as named artifacts**, not procedural meeting minutes. Each significant decision references its accountable layer and signing role.
+
+These are the minimum. Below them, the framework is vocabulary, not application — see [`applicability.md`](./applicability.md) on minimum viable depth.
+
+## Governance-body intensity scales with depth
+
+**Deep composition (typically product engineering, shared platform):** dedicated governance body holds three accountable roles in alignment.
+
+| Layer pair | Why it's a governance body |
+|------------|----------------------------|
+| Vision + Strategy | Same accountable role often, but the body forces explicit re-examination at each cycle |
+| Architecture | Cross-consumer decisions (skill library evolution, invariant changes) benefit from formalized review |
+| Tactics | Surfaces signals up; receives clarity down |
+
+Decisions about composition-framework evolution, invariant changes, skill-library additions, cross-consumer effects pass through this body. Without alignment of the accountable roles, the framework doesn't work — it becomes ceremony.
+
+**Medium composition (function-level AI integration):** accountability is named per layer but no dedicated governance body. Cross-layer signals handled in existing exec rhythms (1-1s, function reviews, OKR check-ins).
+
+**Light composition / vocabulary-only:** accountability is still named per layer (this is the minimum). No additional ceremony.
+
+## Vision Falsification Protocol
+
+A key v3 addition. Vision-as-committed-hypothesis is operational only if there's a protocol for what happens when falsification triggers fire. Without the protocol, "Vision is a hypothesis with revision triggers" is aspirational epistemology.
+
+### Protocol shape
+
+**Step 1 — Triggers must be observable and named.**
+
+Every Vision commitment includes 2-5 named triggers. Each trigger is:
+
+- **Observable** — measurable in real metrics, not interpretive judgment. Not "users seem unhappy"; "weekly retention drops below 35% for 4 consecutive weeks."
+- **Bounded** — has a concrete threshold. Not "engagement falls"; "AI-feature daily-active rate fails to exceed 20% by end of Q3."
+- **Owned** — a named role monitors the trigger continuously. Trigger-owner is typically a function leader (Strategy layer) close to the relevant signal.
+
+**Step 2 — Trigger fires.**
+
+When the trigger threshold is reached, the trigger owner:
+
+- Reports to Vision accountable role within 1 week of confirmation
+- Provides supporting data and the trigger interpretation
+- Does NOT make Vision-revision decision unilaterally
+
+**Step 3 — Vision review session.**
+
+Within 2 weeks of trigger fire, a Vision review session convenes:
+
+- Vision accountable role + governance body (Architecture and Strategy accountable roles)
+- Optional: trigger owner presents data; outside experts as needed
+- Three questions: Was the trigger interpretation correct? Is the underlying signal what we thought? What are the alternative Vision hypotheses?
+
+**Step 4 — Decision, documented.**
+
+One of three outcomes, captured as named artifact:
+
+- **Confirm Vision.** Trigger interpretation didn't survive review; current Vision continues. Document why the trigger fire was misleading.
+- **Revise Vision.** Trigger interpretation correct; Vision is updated. Document new commitment, new triggers, and effective date.
+- **Extend monitoring.** Insufficient evidence for confirm-or-revise; new trigger thresholds set with shorter horizon.
+
+**Step 5 — Architecture re-examination (if Vision revised).**
+
+Within 4 weeks of Vision revision, Architecture review session:
+
+- Each significant Architecture commitment under old Vision is assessed: still aligned, partially aligned (refactor required), or invalidated (rebuild)
+- Documented decision per commitment. No automatic invalidation; each decision explicit.
+- Migration plan and cost estimate for changes required by revised Vision
+
+### Why this is necessary
+
+Without the protocol, Vision-as-hypothesis defaults to "Vision is committed; we'll figure out revision when we see it." That collapses to either fixed Vision (the original survivorship-bias risk) or ad-hoc revision (no discipline). The protocol creates the conditions under which Vision can both anchor Architecture intentionally AND be revised when evidence demands it — without either failure mode.
+
+## Challenge flow
+
+Same as before: challenge flows down (Vision → Architecture → Strategy → Tactics); feedback flows up (inform, not dictate). At deep composition: enforced through governance-body protocols. At lighter depths: principle followed in existing rhythms.
+
+## Political dimensions — named explicitly
+
+Governance is not neutral. Naming changes:
+
+**Architecture authority consolidation.** Whoever holds Architecture accountable gains explicit decision rights. If decisions were previously diffuse (consensus committees, default by accumulation), the consolidation is a real political change. Name it openly.
+
+**Strategy authority sharpening.** Whoever holds Strategy accountable narrows from implicit architecture-influence to explicit composition-selection within architectural constraints. Real narrowing — minimizing it ("nothing changes") invites backlash when the change becomes visible.
+
+**Challenge rights formalization.** Vision-can-challenge-Architecture is explicit; Strategy-only-informs is explicit. This codifies a hierarchy that may have been informal. Adversarial review noted the risk: asymmetric challenge rights can produce architecture-vetoes-product symmetric dysfunction. Mitigation: Strategy layer's ability to inform must operate with real weight; Architecture treats Strategy signals as first-class evidence, not noise to be dismissed.
+
+**Tactics-layer dignity.** Whoever holds Tactics accountable operates within structure they didn't design. Framework legitimacy with this layer depends on Challenge Flow actually working — when Tactics escalates architectural mismatch, Architecture must respond substantively.
+
+## Dual-risk calibration
+
+Governance design faces two failure modes simultaneously:
+
+- **Underpowered.** Framework becomes ceremony; architecture decided by default anyway. Original pre-VAST dysfunction persists.
+- **Overpowered.** Framework becomes gatekeeping; Architecture authority vetoes legitimate Strategy moves; shadow composition patterns emerge.
+
+Both real. Calibrating between them is ongoing work. Signals to watch:
+
+- Are Strategy-to-Architecture signals flowing, or being dismissed?
+- Are Architecture decisions being made inside the body, or retrofitted post-hoc?
+- Are teams running shadow composition patterns to route around slow governance?
+- Does the accountable-role signature process take days, weeks, or months?
+- Has the Vision Falsification Protocol fired at least once when triggers indicated it should?
+
+See [`consequences.md`](./references/consequences.md) for extended discussion of political dynamics.
+
+## References
+
+- [`vast.md`](./vast.md) — core framework definition (including invariants vs implementations split)
+- [`applicability.md`](./applicability.md) — composition depth and minimum viable depth threshold
+- [`consequences.md`](./references/consequences.md) — political consequences and calibration signals
