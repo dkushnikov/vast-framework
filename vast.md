@@ -139,7 +139,7 @@ Not every layer can challenge every other layer. The shape:
 - **Architecture → self-corrects.** The composition framework evolves through skill additions, interface refinements, and invariant adjustments based on signals from all layers plus discovery.
 - **Tactics → escalates.** Delivery teams escalate execution blockers that reveal architectural mismatch.
 
-**Principle.** Challenge flows down (Vision → Architecture → Strategy → Tactics). Feedback flows up (inform, not dictate).
+**Principle.** Feedback flows up (inform, not dictate); challenge flows down — but the *only* downward challenge right is Vision's, over Architecture. The V→A→S→T arrows are the commitment cascade, not a license for each layer to challenge the one below.
 
 See [`governance.md`](./governance.md) for how Challenge Flow operates across composition depths.
 
