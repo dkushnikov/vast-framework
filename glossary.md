@@ -1,6 +1,6 @@
 # Glossary
 
-Shared vocabulary for VAST. Foundational documents (`vast.md`, `why-now.md`, `applicability.md`, `governance.md`, `scaling.md`) all use these terms with the definitions given here. If a term appears with a different meaning in any foundational document, it's a bug — file the discrepancy.
+Shared vocabulary for VAST. Foundational documents (`vast.md`, `kernel.md`, `anti-patterns.md`, `layer-handoffs.md`, `why-now.md`, `applicability.md`, `governance.md`, `scaling.md`) all use these terms with the definitions given here. If a term appears with a different meaning in any foundational document, it's a bug — file the discrepancy.
 
 ## The four layers
 
@@ -62,7 +62,7 @@ These aliases denote the same VAST Architecture artifact; the choice of label is
 4. Strategy decisions reference Architecture commitments explicitly
 5. ≥1 observable Challenge Flow instance per quarter
 
-If 5/5 hold: VAST is applied. If 0–3 hold: vocabulary used, not VAST applied.
+If 5/5 hold: VAST is applied. If 4/5 hold: VAST is partially applied. If 0–3 hold: vocabulary used, not VAST applied.
 
 ## Governance
 

@@ -64,7 +64,7 @@ This is the form of architecture that matters in an era when the substrate benea
 | Layer | What it owns |
 |-------|--------------|
 | **Vision** | What experiences we enable. For whom. Why this exists. |
-| **Architecture** | The composition framework — skill library, interfaces, invariants. What can be composed, how, under what guarantees. |
+| **Architecture** | The composition framework — skill library, interfaces, invariants, implementations. What can be composed, how, under what guarantees. |
 | **Strategy** | Which experiences to compose next. Sequencing. Customer validation. Roadmap of compositions. |
 | **Tactics** | Personalized instance delivery. Specific composition moments for specific users. |
 

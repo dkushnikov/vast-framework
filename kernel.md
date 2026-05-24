@@ -18,7 +18,7 @@ This layering is itself VAST's invariants-vs-implementations split applied *to V
 
 5. **Anchor Values in Architecture.** Treat values as structural constraints that bound the solution space, not as aspirational posters. — *Values get a structural job, or they stay on the wall.*
 
-6. **Challenge flows down; evidence flows up.** Vision challenges Architecture (the only downward challenge right); Strategy informs Architecture; feedback and falsifying evidence flow upward — and Vision is a committed hypothesis with named revision triggers. — *Keeps the cascade honest and the Vision falsifiable.*
+6. **Challenge flows down; feedback flows up.** Vision challenges Architecture (the only downward challenge right); Strategy informs Architecture; feedback and falsifying evidence flow upward — and Vision is a committed hypothesis with named revision triggers. — *Keeps the cascade honest and the Vision falsifiable.*
 
 7. **Minimal sufficiency.** Bring only the composition depth the work requires; VAST is an extension at a complexity threshold, not a total methodology — and it states what it refuses to prescribe. — *The guard against ceremony and cargo-culting.*
 

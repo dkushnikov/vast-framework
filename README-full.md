@@ -63,7 +63,10 @@ Two tiers of documents. **Foundational** documents define the framework and must
 
 The following documents are the framework. Together they form a self-consistent description of what VAST is, how to apply it, and where it applies.
 
+- [`kernel.md`](./kernel.md) — the mandatory portable core. The 7 Principles, 4 Rules, published non-goals, and VAST's own self-falsification criterion. What makes something *actually* VAST; everything else is Guides / Adapters / Experiments.
 - [`vast.md`](./vast.md) — framework essence. Four layers, what each owns, the composition-framework definition (invariants vs implementations split), intentional priority, challenge flow, delivery vs discovery, Matryoshka.
+- [`anti-patterns.md`](./anti-patterns.md) — the authoritative failure-mode catalogue (13 patterns, `AP-NN` IDs, 5 themes), each mapped to the Kernel principle/rule it violates.
+- [`layer-handoffs.md`](./layer-handoffs.md) — the downward V→A→S→T handoffs: what each layer must hand the next, as invariants (medium-agnostic).
 - [`why-now.md`](./why-now.md) — the commoditization argument. Why VAST rather than Lean Startup / MVP / Agile. Iteration economics. Probabilistic-substrate objection addressed via the invariants/implementations split.
 - [`applicability.md`](./applicability.md) — combined composition-depth × organizational-scope decision guide. Spectrum (deep / medium / light / vocabulary-only). **Minimum viable depth** — five observable conditions that distinguish "VAST applied" from "VAST vocabulary used." Also: **what VAST does not cover for AI transformation** — explicit scope limits.
 - [`governance.md`](./governance.md) — accountability across three levels (company / product / function), abstracted from specific role titles. **Vision Falsification Protocol** — five-step process for what happens when Vision revision triggers fire. Governance-body intensity scales with composition depth.
