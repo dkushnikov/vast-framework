@@ -43,19 +43,21 @@ For the doc under review:
 4. **Check Vision falsification triggers** — if a Vision is present, does it name observable, bounded, owned revision triggers? (Only when Vision present. See `references/validation-heuristics.md#falsification-triggers`.)
 5. **Check composition framework completeness** — if the doc is product-scope and has an Architecture, does it contain all four sub-elements and the invariants-vs-implementations split? (Only when product Architecture present; adapt for non-product scopes. See `references/validation-heuristics.md#composition-completeness`.)
 6. **Check Challenge Flow respect** — if the doc describes cross-layer interactions, do they follow the rules (Vision challenges, Strategy informs, Architecture self-corrects, Tactics escalates)? (Passes by default if no cross-layer interactions described. See `references/validation-heuristics.md#challenge-flow`.)
-7. **Generate report** per Output format below.
+7. **Check layer ownership (Kernel floor)** — does each present layer name *one* accountable owner, not a committee / "the team" / "TBD"? This reads the Kernel floor as a whole (ownership + the rules the checks above already cover). (See `references/validation-heuristics.md#kernel-floor`.)
+8. **Generate report** per Output format below.
 
 ## Checks
 
 | # | Check | Heuristic (1-liner) | Detail reference |
 |---|---|---|---|
-| 1 | Layer purity | Each present layer holds content appropriate to its level. Vision = why/experiences/outcomes (not features/deadlines). Architecture = composition framework / structural domains (not a project list, not market stance). Strategy = investment direction/sequencing. Tactics = concrete delivery. Content belonging to another layer → Fail; mild bleed → Warn. | `references/validation-heuristics.md#layer-purity` (primary); `../../references/anti-patterns.md` (#1 Vision-as-Use-Case, #2 Architecture-by-default) |
+| 1 | Layer purity | Each present layer holds content appropriate to its level. Vision = why/experiences/outcomes (not features/deadlines). Architecture = composition framework / structural domains (not a project list, not market stance, not an org chart / tech stack). Strategy = investment direction/sequencing. Tactics = concrete delivery. Content belonging to another layer → Fail; mild bleed → Warn. | `references/validation-heuristics.md#layer-purity` (primary); `../../references/anti-patterns.md` (#1 Vision-as-Use-Case, #2 Architecture-by-default, #9 AP-03 Architecture-as-org-chart/stack) |
 | 2 | Scope homogeneity | The doc operates at ONE scope (company / product / function / WoW). Layers at different scopes (e.g. company Vision + product-UI Architecture) → Fail; a single ambiguous layer → Warn. | `references/validation-heuristics.md#scope-homogeneity` (primary); `../../references/layer-definitions.md` (per-scope identifying signals) |
 | 3 | Vision falsification triggers | If a Vision is present, it names observable + bounded + owned revision triggers. No triggers at all → Fail; present-but-vague/unowned → Warn. (Skip if no Vision present.) | `references/validation-heuristics.md#falsification-triggers` |
-| 4 | Composition framework completeness | If product-scope Architecture is present, it contains all four sub-elements (skill library, interfaces, invariants, implementations) AND splits invariants from implementations. Partial → Warn; absent (Architecture claimed but framework empty/hand-wavy) → Fail. Non-product scopes adapt to org capabilities / process building blocks. (Skip if no Architecture present.) | `references/validation-heuristics.md#composition-completeness` (primary); `../../references/vast-essentials.md` (invariants/implementations split) |
+| 4 | Composition framework completeness | If product-scope Architecture is present, it contains all four sub-elements (skill library, interfaces, invariants, implementations) AND splits invariants from implementations. Partial → Warn; absent (Architecture claimed but framework empty/hand-wavy) → Fail; invariants tier populated with substrate-coupled specifics (models/prompts/tunings) → AP-04. Non-product scopes adapt to org capabilities / process building blocks. (Skip if no Architecture present.) | `references/validation-heuristics.md#composition-completeness` (primary); `../../references/vast-essentials.md` (invariants/implementations split); `../../references/anti-patterns.md` (#10 AP-04 implementation-as-invariant) |
 | 5 | Challenge Flow respect | If cross-layer interactions are described, they follow: Vision *challenges* Architecture (only downward challenge right); Strategy *informs* Architecture (never overrides); Architecture self-corrects; Tactics escalates. Violations (esp. Strategy overriding Architecture) → Fail. Passes by default if no cross-layer interactions described. | `references/validation-heuristics.md#challenge-flow` (primary); `../../references/anti-patterns.md` (#8 Strategy challenging Architecture) |
+| 6 | Kernel floor (ownership) | Each present layer names ONE accountable owner (one neck) — not a committee, "the team", or "TBD". Ownerless/committee-owned layer → Fail (AP-09); a doc that names no owners and doesn't claim "VAST applied" → Warn. Also reads the floor as a whole (ownership + Architecture-before-Strategy + Vision-falsifiable + invariants/implementations); below the floor = VAST vocabulary, not applied. | `references/validation-heuristics.md#kernel-floor` (primary); `../../references/anti-patterns.md` (#11 AP-09 ownerless layers) |
 
-> Check numbers above are stable identifiers, not an execution order. The Process runs scope+layers → purity → scope homogeneity → falsification → composition → Challenge Flow; the report groups findings by severity. Reference checks by **name** (e.g. "Layer purity"), not by number, in the report.
+> Check numbers above are stable identifiers, not an execution order. The Process runs scope+layers → purity → scope homogeneity → falsification → composition → Challenge Flow → ownership; the report groups findings by severity. Reference checks by **name** (e.g. "Layer purity"), not by number, in the report.
 
 ## Output format
 
@@ -77,7 +79,7 @@ Produce a markdown report with this exact structure:
 - {layer or quote} — {check name}: {why fails} — {evidence quote} — {suggested fix}
 
 ## Summary
-{1-3 sentences: overall state, top 1-2 fixes recommended.}
+{1-3 sentences: overall state, whether the Kernel floor holds, top 1-2 fixes recommended.}
 ```
 
 If a severity section has no items, write `- (none)` under it — keep all three sections present so report structure is identical across clean and flagged docs. Checks that are skipped (e.g. falsification when no Vision present, composition when no Architecture present) do not appear in the report at all — only checks that actually ran produce Pass/Warn/Fail lines.

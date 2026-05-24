@@ -28,7 +28,8 @@ Each present layer must hold content appropriate to its level. Drift = content t
 **Drift to flag:**
 - **Tactics drift (Fail):** Architecture written as a project/task list — "Build the auth service, migrate services, onboard engineers." No skills, no interfaces, no invariants — just deliverables. This is anti-pattern #2 (Architecture-by-default) made concrete: the framework stays implicit while a backlog stands in for it. Reframe: name the skill boundaries, the invariants, the accountable owner; move the task list to Tactics.
 - **Vision drift (Fail or Warn):** Architecture written as market positioning / "why we win" — "We become the default platform for X." That's Vision content. Fail when it fully displaces structural content; Warn when a positioning sentence sits atop otherwise-structural Architecture.
-- See `../../../references/anti-patterns.md` #2 (Architecture-by-default).
+- **Org-chart / tech-stack drift (Fail):** Architecture is an org chart, a system/deployment diagram, or a tech-stack list — reporting lines or technologies — with no domains, invariants, interfaces, or values-as-constraints. The wrong object stands in for the decision-architecture. This is anti-pattern AP-03. Reframe: org charts and stacks *represent or implement* architectural choices; name the domains, invariants, interfaces, and values.
+- See `../../../references/anti-patterns.md` #2 (Architecture-by-default) and #9 (AP-03, Architecture-as-org-chart/stack).
 
 ### Strategy
 
@@ -110,6 +111,8 @@ Plus the **invariants-vs-implementations split** must be present and meaningful:
 - **Warn:** partial — some sub-elements present (e.g. skill library + interfaces) but invariants and implementations are not split, or one of the four sub-elements is missing. Suggested fix: add the missing sub-element and/or separate invariants from implementations.
 - **Pass:** all four sub-elements present and invariants/implementations split is explicit.
 
+**Implementation-as-invariant (AP-04).** Distinct from absence: the split is *claimed* but the invariants tier is populated with substrate-coupled specifics — named models, prompts, vendors, retry/timeout values. Flag **Warn** if a few items are mislabeled; **Fail** if the whole "invariants" list is implementations (the framework then only *looks* portable). Reframe: state the portable rule ("every response carries provenance + a fallback") apart from the substrate tactic ("GPT-4o @ 0.2, 3× retry"). See `../../../references/anti-patterns.md` #10 (AP-04).
+
 ### Non-product scopes
 
 For non-product Architecture, adapt the four sub-elements to the scope (per `../../../references/layer-definitions.md` and `architecture-levels.md`), and apply the depth-appropriate bar — do not demand product-runtime rigor of a light-composition function doc (that would itself be anti-pattern #6, forcing deep where light fits):
@@ -146,6 +149,29 @@ The rules (glossary.md "Challenge Flow"): **challenge flows down, feedback flows
 - **Pass (by default):** no cross-layer interactions described, OR all described interactions follow the rules.
 
 See `../../../references/anti-patterns.md` #8 (Strategy challenging Architecture instead of informing) for the bad/good fragment pair.
+
+## Kernel floor {#kernel-floor}
+
+The Kernel's four Rules are the floor that separates *VAST applied* from *VAST vocabulary*. Three are already covered by other checks; this check adds the one that isn't — **layer ownership** — and reads the floor as a whole.
+
+| Kernel Rule | Checked by |
+|---|---|
+| All four present layers named, each with **one accountable owner** | here (ownership) |
+| Architecture explicit **before** Strategy commits | layer purity (Architecture-by-default) + composition completeness |
+| Vision is a **falsifiable hypothesis** | falsification-triggers check |
+| **Invariants separated from implementations** | composition completeness (+ implementation-as-invariant) |
+
+### Ownership (Rule 1)
+
+Each present layer names **one** accountable owner (one neck) — not "the team", "leadership", a committee, or "TBD".
+
+- **Fail:** a *present* layer has no single accountable owner — its owner is a collective / committee / "TBD", left blank while other layers are owned, or only a trigger/doer owner is named (not a layer owner). The Rule requires one neck per present layer, so a single missing or committee owner fails *that* layer. This is anti-pattern AP-09 (ownerless layers). Reframe: name exactly one accountable role per layer — consult many, decide one.
+- **Warn:** the doc names *no* owners anywhere (an informal sketch) and does not claim VAST is *applied* — flag the gap rather than failing. Once the doc owns some layers or claims "VAST applied," a missing owner is a Fail (see `applicability.md` minimum-viable-depth condition 2).
+- **Pass:** each present layer names exactly one accountable owner.
+
+### Reporting the floor
+
+In the Summary, note whether the Kernel floor holds (Rules 1–4 all pass for the present layers). Below the floor, the doc is *VAST vocabulary, not VAST applied* — say so, and cross-reference the failing sub-checks rather than duplicating their findings.
 
 ## Source
 

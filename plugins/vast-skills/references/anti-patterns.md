@@ -2,7 +2,7 @@
 
 The recurring ways VAST documents go wrong, tuned for automated detection: each entry gives the dysfunction, observable signals a skill can detect in a doc, a bad example fragment, the corrected reframe, and the canonical source. Example fragments are illustrative inventions that exhibit the named pattern — they are not quotes from real docs.
 
-**Source of truth:** the framework catalogue is [`anti-patterns.md`](../../../anti-patterns.md) at the repo root — 13 patterns, each mapped to the Kernel principle it violates. This file is its detection-tuned companion: the eight patterns that can be reliably flagged in a written doc. Mapping to canonical IDs:
+**Source of truth:** the framework catalogue is [`anti-patterns.md`](../../../anti-patterns.md) at the repo root — 13 patterns, each mapped to the Kernel principle it violates. This file is its detection-tuned companion: the eleven patterns that can be reliably flagged in a written doc. Mapping to canonical IDs:
 
 | This file | Canonical ID |
 |---|---|
@@ -14,8 +14,11 @@ The recurring ways VAST documents go wrong, tuned for automated detection: each 
 | 6. Forcing deep composition where light fits | AP-11 |
 | 7. Vocabulary-only where deep is needed | AP-02 |
 | 8. Strategy challenging Architecture | AP-12 |
+| 9. Architecture mistaken for org chart or tech stack | AP-03 |
+| 10. Implementation mistaken for invariant | AP-04 |
+| 11. Ownerless layers | AP-09 |
 
-Canonical-only (operating-level or newer doc patterns): AP-03 (Architecture-as-org-chart/stack), AP-04 (implementation-as-invariant), AP-09 (ownerless layers), AP-10 (VAST-as-waterfall), AP-13 (Kernel-erosion). AP-03/04/09 are doc-detectable — candidates for a future skill bump.
+Canonical-only (operating-level, not reliably doc-detectable): AP-10 (VAST-as-waterfall), AP-13 (Kernel-erosion).
 
 ## 1. Vision-as-Use-Case
 
@@ -156,6 +159,57 @@ Canonical-only (operating-level or newer doc patterns): AP-03 (Architecture-as-o
 
 **Source:** `glossary.md` ("Challenge Flow" — Vision challenges, Strategy informs, Architecture self-corrects, Tactics escalates; challenge flows down, feedback flows up).
 
+## 9. Architecture mistaken for org chart or tech stack
+
+**Pattern:** The Architecture section is an org chart, a system/deployment diagram, or a tech-stack list — reporting lines or boxes-and-arrows — instead of the *decision* architecture (structural domains, their invariants and interfaces, the values that constrain them). The wrong object stands in for Architecture.
+
+**How to spot it:**
+- Architecture section is org boxes + reporting lines, an infra/system diagram, or a list of technologies/vendors
+- No named domains, invariants, interfaces, or values-as-constraints
+- "Architecture = [the diagram / the stack / the team structure]" with nothing about how domains interact under what guarantees
+
+**Example fragment (anti-pattern):**
+> **Architecture:** Platform team owns the API gateway, Data owns the warehouse, ML owns the model service. Stack: Postgres, Kafka, Kubernetes, GPT-4.
+
+**Reframe (corrected):**
+> **Architecture:** the composition framework — skill boundaries (draft / classify / route), the quality + fallback invariants each must hold, the interfaces by which they compose, the values that constrain them. Org charts and tech stacks *represent or implement* architectural choices; they are not sufficient Architecture.
+
+**Source:** `anti-patterns.md` AP-03; `architecture-levels.md` ("Architecture must be concrete per instantiation").
+
+## 10. Implementation mistaken for invariant
+
+**Pattern:** The Architecture's *invariant* tier is populated with substrate-coupled implementations — specific models, prompts, vendors, cadences, retry values — treated as durable. The "what must always hold" list is really "what we happen to do on the current substrate," so the framework looks portable when it isn't.
+
+**How to spot it:**
+- Items under "invariants" name a specific model / vendor / prompt / tool / numeric tuning ("always GPT-4 at temp 0.2", "retry 3×")
+- No separation between portable rules and substrate-coupled tactics — one undifferentiated "technical decisions" pile
+- Removing the named substrate would void the "invariant" — so it isn't one
+
+**Example fragment (anti-pattern):**
+> **Invariants:** all generation uses GPT-4o at temperature 0.2 with our standard system prompt; responses retried 3× on timeout; cached in Redis.
+
+**Reframe (corrected):**
+> **Invariant (portable):** every user-facing response carries provenance and a fallback on low confidence. **Implementation (migrates):** currently GPT-4o @ 0.2, 3× retry, Redis cache. State the portable rule apart from the substrate tactic.
+
+**Source:** `anti-patterns.md` AP-04; `vast-essentials.md` §3 (invariants vs implementations).
+
+## 11. Ownerless layers (accountability-by-committee)
+
+**Pattern:** A layer's content is present, but its accountable owner is "the team", "leadership", "TBD", or a committee. No single neck commits or revises the layer, so challenge and evidence have no decider.
+
+**How to spot it:**
+- Owner reads "the team / leadership / everyone / TBD / [a guild or committee]", or no owner is named
+- Several names listed as co-owners of one layer, none singular-accountable
+- Layer decisions described as "we'll align" / "by consensus" rather than owned
+
+**Example fragment (anti-pattern):**
+> **Architecture owner:** the platform guild (shared ownership across the eng leads).
+
+**Reframe (corrected):**
+> **Architecture owner:** one named role. Consult the guild; decide one. Each layer names exactly one accountable owner for commitment and revision — distinct from the many who inform it.
+
+**Source:** `anti-patterns.md` AP-09; the Kernel Rule "each of the four layers has one accountable owner".
+
 ---
 
-**Source note:** These eight are the detection-tuned subset of the canonical catalogue ([`../../../anti-patterns.md`](../../../anti-patterns.md)) — see it for the full 13 and the Kernel-principle mapping. Patterns derived from `applicability.md` ("Common mistakes"), `standard-framework.md` ("Where it breaks", "Values treated as aspirational", "OKRs conflate three levels"), `glossary.md` ("Vision", "Challenge Flow"), `governance.md` ("Vision Falsification Protocol"), and `vast.md` ("Intentional, not strict" — architecture-by-default), all @v3.4. See `version-pinning.md`.
+**Source note:** These eleven are the detection-tuned subset of the canonical catalogue ([`../../../anti-patterns.md`](../../../anti-patterns.md)) — see it for the full 13 and the Kernel-principle mapping. Patterns derived from `applicability.md` ("Common mistakes"), `standard-framework.md` ("Where it breaks", "Values treated as aspirational", "OKRs conflate three levels"), `glossary.md` ("Vision", "Challenge Flow"), `governance.md` ("Vision Falsification Protocol"), and `vast.md` ("Intentional, not strict" — architecture-by-default), all @v3.4. See `version-pinning.md`.

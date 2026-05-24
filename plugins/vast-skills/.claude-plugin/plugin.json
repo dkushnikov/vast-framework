@@ -1,6 +1,6 @@
 {
   "name": "vast-skills",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "VAST framework skills: validate (single-doc layer purity), transform (prose → VAST shape), connect (parent→child cascade), okr-audit (OKR triad conflation), draft (scaffold a new VAST doc from a seed).",
   "author": {
     "name": "Dmitry Kushnikov",
