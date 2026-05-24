@@ -100,6 +100,13 @@ Fail any test → it's Strategy/Tactics *within* the parent, not a nested instan
 
 A common trap with composition-depth spectrums: "vocabulary-only" depth becomes a label that anyone can claim. "We use VAST" then means nothing because the claim is unfalsifiable. The framework needs a floor — observable conditions that distinguish "VAST applied" from "VAST vocabulary used."
 
+**Two things wear the word "vocabulary" — keep them apart:**
+
+- **Vocabulary-only *depth*** is the lightest point on the composition-depth spectrum — four-layer language for company-wide alignment, with little or no formal skill library. It is a statement about *how much composition framework* the scope carries, not a verdict on conformance.
+- **VAST vocabulary, not VAST applied** is using the four-layer language while sitting *below the floor* — the failure the floor exists to catch.
+
+These are different axes. *Depth* answers "how much composition framework does this scope carry?" The *floor* answers "is the discipline actually present?" Depth scales the framework's richness; it never lowers the floor. "We're only at vocabulary-only depth" is therefore not a licence to skip the floor — a light-depth scope still names a falsifiable Vision and one accountable owner per layer, or it is honestly *vocabulary, not applied*.
+
 Five conditions must all hold for the work to count as VAST application (at any depth):
 
 1. **Vision is named, committed, and has falsification triggers.** Not "we make great products" or "we serve customers well." Specific experience commitment ("we enable [these experiences] for [these users]") with observable revision conditions ("revise if [this metric] crosses [this threshold] for [this duration]").

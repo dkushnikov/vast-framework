@@ -15,8 +15,8 @@ VAST is recursive across organizational scopes. The four-layer shape (V/A/S/T) r
 
 | Layer | What it owns at company level | Mapped to (typical) |
 |-------|-------------------------------|---------------------|
-| Vision | What the company becomes. Market stance. Why this company exists. | CEO / founder team |
-| Architecture | How the company is structured to deliver the Vision: org design, capability portfolio, technology investment strategy | CEO + leadership team (architecture of the company-as-system) |
+| Vision | What the company becomes. Market stance. Why this company exists. | CEO (or a single founder DRI), informed by the founder team |
+| Architecture | How the company is structured to deliver the Vision: org design, capability portfolio, technology investment strategy | CEO as DRI, informed by the leadership team (architecture of the company-as-system) |
 | Strategy | Which capabilities to develop in what sequence. Allocation of resources to functions and bets. | Function leaders / heads of organizations |
 | Tactics | Execution within each function | Teams, individual contributors |
 
@@ -62,12 +62,15 @@ These are the minimum. Below them, the framework is vocabulary, not application 
 
 Capturing a decision is not the same as making it findable. The common failure: Architecture gets decided in commits, chat threads, or one team's head — *captured*, perhaps, but the downstream consumers who must operate within it can't discover *what* was decided or *why* at the moment they need it. The framework's decisions then function as a black box, and downstream layers re-create architecture-by-default around them.
 
-Frame it as the split the framework already uses:
+Making those records *findable* is a **recommended (Guide-level) pattern, not a Kernel invariant.** Capturing significant decisions as named artifacts is already part of the accountability pattern above; this section is the next step — discoverability — and it scales with composition depth rather than acting as a conformance floor.
 
-- **Invariant:** every Architecture decision that changes an *inherited constraint* — an invariant, an interface, a skill boundary, a trust contract, or cross-consumer behavior — is published in a **discoverable decision record**, reachable from the normal work surfaces of the consumers it affects, without relying on tribal knowledge. (Routine implementation migrations are excluded unless they change an inherited constraint.)
-- **Implementations (fungible):** *how* discoverability is achieved — an ADR repository, PR-to-ticket links, a decision-doc index, an RFC archive. VAST mandates the invariant, never the tool.
+**The pattern:** when an Architecture decision changes a *material* inherited constraint — an invariant, an interface, a skill boundary, a trust contract, or cross-consumer behavior — make its record discoverable, not merely captured. *Material* excludes routine implementation migrations that leave inherited constraints intact.
 
-This is the same argument [`scaling.md`](./scaling.md) makes about operating models: as agents and teams multiply, decisions must live in a discoverable record, not tribal knowledge. A decision no downstream consumer can find is, operationally, a decision that didn't propagate.
+- **Minimum discoverability:** the record is (a) indexed from the parent Architecture's decision record and (b) linked from the work surfaces of the consumers the change affects. That is the achievable bar — reachable by the consumers who must operate within it — not "broadcast to every consumer," which is an aspirational poster ([AP-08](./anti-patterns.md)), not a mechanism.
+- **The medium is fungible:** an ADR repository, PR-to-ticket links, a decision-doc index, an RFC archive. The pattern recommends discoverability; it never mandates the tool.
+- **Vocabulary-only depth:** no composition framework exists to propagate decisions about — the pattern doesn't apply.
+
+This is the same concern [`scaling.md`](./scaling.md) raises: as agents and teams multiply, decisions need to live in a discoverable record, not tribal knowledge. A decision no downstream consumer can find is, operationally, a decision that didn't propagate.
 
 ## Governance-body intensity scales with depth
 

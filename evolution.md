@@ -52,6 +52,14 @@ From that mapping the governance falls out:
 - **One accountable owner per layer.** For VAST itself the framework steward (currently Dmitry Kushnikov) holds the accountable-owner role for all four layers; any delegation must name exactly one owner per layer (the Kernel floor applies to VAST too). Each decision is signed as a named change-record — decision type, affected layer, owner, date, rationale/evidence, affected docs, refusal impact — and the version history in [`README-full.md`](README-full.md) is the audit trail.
 - **Fitness on the framework.** At each release or promotion/demotion decision, the steward asks the [layer-fitness](fitness.md) questions of VAST-as-a-system: is the Kernel still minimal *and* sufficient? Are the Guides earning their place, or has the surface bloated? — not a new ritual; attached to the change work already happening.
 
+### Why this isn't circular
+
+A fair challenge: *isn't "VAST governs VAST" self-justifying — the framework grading its own homework?* No, and the distinction is load-bearing:
+
+- **Dogfooding, not self-proof.** Applying VAST to its own evolution shows the model is *usable on itself*; it does not *prove the model correct*. Correctness is settled by the Kernel's [self-falsification criterion](kernel.md) — documented pilots and the felt-as-ceremony trigger — which is external evidence, not an internal assertion.
+- **The steward can be wrong.** The self-model gives the steward a *structured* way to change the framework (Architecture self-correction within a falsifiable Vision); it gives no authority to declare the framework *working*. Only the falsification triggers, fired by real adopter evidence, do that.
+- **Circularity would mean unfalsifiability.** A framework that proved itself by its own rules could never be wrong. VAST publishes the conditions under which it *is* wrong. Naming your own defeat conditions is the opposite of circular.
+
 Evolving VAST is therefore not a special process bolted on — it is VAST, run on itself. A framework that couldn't govern its own change would fail its own Principle 6.
 
 ---

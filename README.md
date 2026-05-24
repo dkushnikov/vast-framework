@@ -32,7 +32,7 @@ Guides by function: [Product](guides/for-product.md) · [Engineering](guides/for
 - **[kernel.md](kernel.md)** — the mandatory core: principles, rules, non-goals — what makes something *actually* VAST
 - **[anti-patterns.md](anti-patterns.md)** — the catalogue of failure modes (how VAST gets documented and operated wrong), each mapped to the Kernel principle it violates
 - **[vast.md](vast.md)** — core framework definition
-- **[layer-handoffs.md](layer-handoffs.md)** — what each layer must hand the next: the invariant payloads of the V→A→S→T cascade (medium-agnostic)
+- **[layer-handoffs.md](layer-handoffs.md)** — what each layer must hand the next: the required payloads of the V→A→S→T cascade (medium-agnostic)
 - **[fitness.md](fitness.md)** — thin per-layer fitness questions: is each layer actually doing its job? (not a maturity ladder, not metrics)
 - **[evolution.md](evolution.md)** — how VAST evolves itself: promotion/retirement across Kernel→Guides→Adapters→Experiments, protecting the refusals, VAST applied to VAST
 - **[standard-framework.md](standard-framework.md)** — how VAST relates to OKRs, BSC, Wardley Maps

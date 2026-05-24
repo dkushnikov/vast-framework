@@ -173,7 +173,7 @@ The test: does the component team commit to the top-level invariants? If yes →
 
 ### Recursion threshold — when a scope earns its own V→A→S→T
 
-Most work does *not* spawn a nested instance; it's Strategy/Tactics within the parent. A scope earns its own V→A→S→T only when all hold:
+**Recursion is available, not automatic.** Most work does *not* spawn a nested instance; it's Strategy/Tactics within the parent. Nesting is something a scope *earns*, not a default to apply at every level — a scope earns its own V→A→S→T only when all hold:
 
 - **A distinct, falsifiable Vision** — its own committed hypothesis, not just a slice of the parent's.
 - **Local invariants beyond the inherited ones** — guarantees that are its own, not only the parent's it operates within.
