@@ -169,6 +169,14 @@ The critical distinction:
 
 The test: does the component team commit to the top-level invariants? If yes → real Matryoshka. If every component team defines its own handoff protocols, state-sharing patterns, trust contracts — false Matryoshka.
 
+**The mechanics compose across depths.** Each operating mechanic nests the same way the layers do:
+
+- **Kernel** — every nested instance that claims VAST honors the same [Kernel](kernel.md) floor; Kernel commitments are scope-portable, while the parent's Architecture invariants are inherited constraints at the child boundary.
+- **Accountability** — the one-accountable-owner-per-layer rule remaps at each scope; a cross-scope dispute names the parent owner who holds the decision.
+- **Handoffs** — the constraint-bearing parts of the parent's Architecture — invariants, interfaces, skill boundaries, values-as-constraints — are the child's *inherited constraint*; within that, the child runs its own V→A→S→T [layer handoffs](layer-handoffs.md).
+- **Fitness** — the parent's Architecture-[fitness](fitness.md) question is a practical false-Matryoshka check: can nested components be supported while preserving the parent's invariants and interfaces, or are they drifting into shadow patterns?
+- **Escalation** — when a child hits a use-case the parent's Architecture can't support, it routes *up* through the [Challenge & Escalation Protocol](governance.md) — informing the parent's Architecture for a gap, or escalating to the parent's Vision for a scope change — rather than forking its own contracts. So false Matryoshka has two forms: delegating *before* a validated parent Architecture exists is **AP-01** (architecture-by-default) at cross-scope scale; overriding an *existing* parent Architecture instead of routing is the cross-scope analogue of **AP-12**.
+
 ## Composition depth, not mode switch
 
 Earlier versions distinguished "VAST Strict" (product-engineering, substrate-heavy) from "VAST Lite" (function-level, loose substrate). On adversarial review, the two-mode split conceded the core claim was narrower than presented — if Lite is "shared vocabulary + common sense," it undermines the framework's force.
