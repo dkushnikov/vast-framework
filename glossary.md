@@ -1,6 +1,6 @@
 # Glossary
 
-Shared vocabulary for VAST. Foundational documents (`vast.md`, `kernel.md`, `anti-patterns.md`, `layer-handoffs.md`, `why-now.md`, `applicability.md`, `governance.md`, `scaling.md`) all use these terms with the definitions given here. If a term appears with a different meaning in any foundational document, it's a bug — file the discrepancy.
+Shared vocabulary for VAST. Foundational documents (`vast.md`, `kernel.md`, `anti-patterns.md`, `layer-handoffs.md`, `fitness.md`, `why-now.md`, `applicability.md`, `governance.md`, `scaling.md`) all use these terms with the definitions given here. If a term appears with a different meaning in any foundational document, it's a bug — file the discrepancy.
 
 ## The four layers
 
