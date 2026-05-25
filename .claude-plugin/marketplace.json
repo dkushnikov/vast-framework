@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "vast-framework",
+  "description": "VAST framework — Vision → Architecture → Strategy → Tactics. Skills that operationalize the framework against real docs.",
+  "owner": {
+    "name": "Dmitry Kushnikov",
+    "email": "dkushnikov@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "vast-skills",
+      "description": "VAST framework skills: validate (single-doc layer purity), transform (prose → VAST shape), connect (parent→child cascade), okr-audit (OKR triad conflation), draft (scaffold a new VAST doc from a seed).",
+      "source": "./plugins/vast-skills",
+      "category": "productivity",
+      "homepage": "https://github.com/dkushnikov/vast-framework"
+    }
+  ]
+}
