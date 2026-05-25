@@ -107,6 +107,8 @@ A common trap with composition-depth spectrums: "vocabulary-only" depth becomes 
 
 These are different axes. *Depth* answers "how much composition framework does this scope carry?" The *floor* answers "is the discipline actually present?" Depth scales the framework's richness; it never lowers the floor. "We're only at vocabulary-only depth" is therefore not a licence to skip the floor — a light-depth scope still names a falsifiable Vision and one accountable owner per layer, or it is honestly *vocabulary, not applied*.
 
+**A third axis: domain-fit — is VAST the right tool here at all?** Depth and floor both presume VAST fits the scope; whether it fits is a prior question, assessed **per domain, not per company.** VAST is a delivery framework for work whose Vision is committable and whose Architecture carries real invariants — Cynefin's Complex/Complicated. A domain that is genuinely pre-PMF, where Vision is unknown before market contact (Cynefin Chaotic), is better served by Lean Startup / MVP discovery; VAST there is over-engineered (see [README](README.md)). A single company is routinely post-PMF in one domain (apply VAST) and pre-PMF in another (don't) at the same time. Assess fit domain by domain — do not inherit one domain's verdict across the company.
+
 Five conditions must all hold for the work to count as VAST application (at any depth):
 
 1. **Vision is named, committed, and has falsification triggers.** Not "we make great products" or "we serve customers well." Specific experience commitment ("we enable [these experiences] for [these users]") with observable revision conditions ("revise if [this metric] crosses [this threshold] for [this duration]").

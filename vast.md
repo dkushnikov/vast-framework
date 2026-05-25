@@ -236,6 +236,8 @@ Within each VAST layer, execution runs via an agentic SDLC cycle: Think → Deci
 
 The connection is acknowledged but formalized separately. For now: VAST is the frame of priorities; SDLC is the motion inside each frame.
 
+**Where the SDLC and discovery sit in the INVARIANTS/IMPLEMENTATIONS split.** The execution discipline is itself substrate-coupled. The specific cycle (Think → Decide → Execute → Log → Mature), the discovery method that feeds it, the cadence and ceremonies — these are *implementations*: chosen per team, migrated as tooling evolves, never prescribed by VAST. What is *invariant* is thinner and substrate-portable: **each layer runs an execution loop that closes.** Log records what happened; the loop is only fit when that record becomes extracted learning and a revised next bet — the Study step a bare Log → Mature omits. Run Scrum, P3.express, or a bespoke cycle; discover by any method — but a loop that logs without studying is unfit (it is what [`fitness.md`](fitness.md) catches at Tactics), because speed of execution without speed of learning compounds nothing. *How* discovery is run, and *what quality bar* it must clear before its signals become load-bearing, are likewise implementations — owned at the layer discovery feeds, not VAST invariants.
+
 ## Relation to OKRs
 
 OKRs are complementary, not overlapping. OKRs express measurable commitments at each VAST layer; VAST prescribes accountability and priority. See [`okrs.md`](./references/okrs.md).
