@@ -95,6 +95,6 @@ The framework does not require specific titles to exist; it requires that each l
 
 **Adjacent frameworks.** VAST engages explicitly with: Domain-Driven Design (bounded contexts ≈ skill-library-per-domain), Team Topologies (Inverse Conway: team types deliver composition framework), Wardley Mapping (situational awareness about commoditization across the value chain), Cynefin (composition layer places AI-first product in Complex domain). Each is complementary or builds-on, not replaced. See `references/external-validation.md`.
 
-**Agentic SDLC.** A complementary execution discipline (Think → Decide → Execute → Log → Mature) that operates inside each VAST layer. VAST is the priority framework for which layer commits what; SDLC is the operating tempo within each layer. Formalized separately.
+**Agentic SDLC.** A complementary execution discipline (Think → Decide → Execute → Log → Mature) that operates inside each VAST layer. VAST is the priority framework for which layer commits what; SDLC is the operating tempo within each layer — an *implementation* in the INVARIANTS/IMPLEMENTATIONS sense (substrate-coupled, chosen per team, never prescribed). The substrate-portable invariant is only that the loop **closes**: learning is extracted from results (the Study step), not merely logged. Formalized separately.
 
 **OKRs.** Complementary commitment-and-measurement mechanism that cascades through VAST layers. OKRs express what each layer commits to numerically; VAST prescribes accountability and priority. Neither replaces the other. See `references/okrs.md`.
