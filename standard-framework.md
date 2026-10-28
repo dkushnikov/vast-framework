@@ -57,6 +57,7 @@ VAST is codification and synthesis of scattered expert practice, not invention:
 | [TOGAF](https://en.wikipedia.org/wiki/TOGAF) | Enterprise architecture standard | Exhaustive, certifiable. VAST is lightweight, no certification |
 | [NCT](https://www.reforge.com/blog/replace-okrs-with-ncts) (Reforge) | Narrative → Commitments → Tasks | Closest 3-level split to VAST triad. Product-team scoped |
 | [Ackoff's idealized design](https://en.wikipedia.org/wiki/Russell_L._Ackoff) | System redesign before strategy | "Define the system before selecting strategies" — same insight as VAST Architecture |
+| [Agile Product Operating Model](https://www.scrum.org/learning-series/agile-product-operating-model/) (Scrum.org, 2024–25) | Content-wise decomposition of a product operating model (Strategy / People / Structure / Value Cycle), Agile Product Portfolio Management ("fund products, not work"), Evidence-Based Management metrics | Cuts by content where VAST cuts by layer of commitment. Fills VAST's stated non-goals (funding model, change cadence, leadership behaviours) — an Adapter, not a layer. "Strategy = The Why" merges Vision, Strategy and Architecture; Architecture has no invariants-vs-implementations split; no falsifiable Vision outside EBM |
 
 ## Feature comparison: VAST vs business/org frameworks
 
